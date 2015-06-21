@@ -1,0 +1,92 @@
+/* allows for fixed positioned fullscreen preloader on mobile */
+/* only gets added if mobile is detected and gets removed when preloading is complete */
+html.cj-fullscreen, 
+html.cj-fullscreen body {
+
+	height: 100%;
+	overflow: hidden;
+		
+}
+
+body {
+			
+	margin: 0;
+	
+}
+
+/* reset */
+#cj-preloader, #cj-preloader * {
+	
+	margin: 0;
+	padding: 0;
+	border: none;
+	font: inherit;
+	background: none;
+	text-align: inherit;
+	line-height: inherit;
+	text-shadow: inherit;
+	
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	text-decoration:none !important;
+}
+
+/* preloader background container */
+#cj-preloader {
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+	
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	
+	background: url(../img/white_ie.png);
+	background: rgba(255, 255, 255, 0.85);
+	
+	-webkit-transition: all 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	-moz-transition: all 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	-o-transition: all 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	-ms-transition: all 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	transition: all 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	text-decoration:none !important;
+	
+}
+
+/* preloader percentage text */
+#cj-preloader span {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -36px 0 0 -49px;
+	text-decoration:none !important;
+	text-align: center;
+	font: 48px 'HelveticaNeue', sans-serif;
+	color: #111;
+	
+}
+
+/* class that gets added once the preloading has finished */
+#cj-preloader.cj-hide-preloader {
+
+	opacity: 0;
+	visibility: hidden;
+	
+}
